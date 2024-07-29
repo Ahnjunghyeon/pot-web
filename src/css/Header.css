@@ -1,0 +1,145 @@
+.header {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.header .div {
+  background-color: #ffffff;
+  height: 70px;
+  position: relative;
+  width: 1440px;
+}
+
+.header .PORTFOLIO-web {
+  color: #000000;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 30px;
+  left: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  white-space: nowrap;
+}
+
+.header .text-wrapper {
+  font-weight: 700;
+}
+
+.header .span {
+  font-family: "Inter-Light", Helvetica;
+  font-weight: 300;
+}
+
+.header .text-wrapper-2,
+.header .text-wrapper-3 {
+  background: none;
+  border: none;
+  color: #000000;
+  font-family: "Inter-Light", Helvetica;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+}
+
+.header .text-wrapper-2 {
+  left: 1345px;
+}
+
+.header .text-wrapper-3 {
+  left: 1266px;
+}
+
+.header .element {
+  color: #000000;
+  font-family: "Inter-Light", Helvetica;
+  font-size: 17px;
+  font-weight: 300;
+  height: 21px;
+  left: 550px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 24px;
+}
+
+.header .element-2 {
+  color: #000000;
+  font-family: "Inter-Light", Helvetica;
+  font-size: 17px;
+  font-weight: 300;
+  height: 21px;
+  left: 660px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 24px;
+}
+
+.header .element-3 {
+  color: #000000;
+  font-family: "Inter-Light", Helvetica;
+  font-size: 17px;
+  font-weight: 300;
+  height: 21px;
+  left: 772px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 24px;
+}
+
+.header .element-4 {
+  color: #000000;
+  font-family: "Inter-Light", Helvetica;
+  font-size: 17px;
+  font-weight: 300;
+  height: 21px;
+  left: 885px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 24px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
