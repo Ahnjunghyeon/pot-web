@@ -1,4 +1,4 @@
-.loginpage {
+.login {
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -6,168 +6,193 @@
   width: 100%;
 }
 
-.loginpage .login-wrapper {
+.login .div {
   background-color: #ffffff;
-  height: 1300px;
-  width: 1440px;
-}
-
-.loginpage .login {
-  background-color: #ffffff2e;
-  border-radius: 20px;
-  box-shadow: inset 0px 4px 4px #00000040, 0px 4px 4px #00000040;
-  height: 762px;
-  left: 470px;
-  overflow: hidden;
+  height: 600px;
   position: relative;
-  top: 269px;
-  width: 500px;
+  width: 350px;
 }
 
-.loginpage .portfolio-web-login {
+.login .portfolio-web-login {
   color: #292929;
   font-family: "Inter-Bold", Helvetica;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
-  height: 72px;
-  left: 150px;
+  height: 48px;
+  left: 108px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 109px;
+  top: 59px;
 }
 
-.loginpage .text-wrapper {
+.login .text-wrapper {
   color: #000000;
-  font-family: "IBM Plex Serif-Regular", Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  left: 163px;
+  font-family: "Inter-ExtraLight", Helvetica;
+  font-size: 15px;
+  font-weight: 200;
+  left: 60px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 510px;
+  top: 159px;
+  white-space: nowrap;
 }
 
-.loginpage .google {
+.login .rectangle {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #8abfff;
+  border-radius: 20px;
+  box-shadow: inset 0px 4px 4px #00000040;
+  height: 40px;
+  left: 50px;
+  position: absolute;
+  top: 178px;
+  width: 250px;
+}
+
+.login .text-wrapper-2 {
+  color: #000000;
+  font-family: "Inter-ExtraLight", Helvetica;
+  font-size: 15px;
+  font-weight: 200;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 253px;
+  white-space: nowrap;
+}
+
+.login .rectangle-2 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #8abfff;
+  border-radius: 20px;
+  box-shadow: inset 0px 4px 4px #00000040;
+  height: 40px;
+  left: 50px;
+  position: absolute;
+  top: 272px;
+  width: 250px;
+}
+
+.login .view {
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0px 4px 4px #00000040;
-  height: 59px;
-  left: 87px;
+  height: 50px;
+  left: 125px;
   overflow: hidden;
   position: absolute;
-  top: 571px;
-  width: 300px;
+  top: 334px;
+  width: 100px;
 }
 
-.loginpage .img {
-  height: 40px;
-  left: 30px;
+.login .text-wrapper-3 {
+  color: #000000;
+  font-family: "IBM Plex Serif-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  left: 50px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 14px;
+}
+
+.login .vector {
+  height: 20px;
+  left: 17px;
+  position: absolute;
+  top: 15px;
+  width: 20px;
+}
+
+.login .text-wrapper-4 {
+  color: #000000;
+  font-family: "IBM Plex Serif-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  left: 165px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 405px;
+}
+
+.login .line {
+  height: 1px;
+  left: 45px;
+  object-fit: cover;
+  position: absolute;
+  top: 415px;
+  width: 100px;
+}
+
+.login .img {
+  height: 1px;
+  left: 206px;
+  object-fit: cover;
+  position: absolute;
+  top: 415px;
+  width: 100px;
+}
+
+.login .view-2 {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 50px;
+  left: 34px;
+  overflow: hidden;
+  position: absolute;
+  top: 462px;
+  width: 140px;
+}
+
+.login .text-wrapper-5 {
+  color: #000000;
+  font-family: "IBM Plex Serif-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  left: 51px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 14px;
+}
+
+.login .img-2 {
+  height: 30px;
+  left: 14px;
   position: absolute;
   top: 10px;
-  width: 40px;
+  width: 30px;
 }
 
-.loginpage .div {
-  color: #000000;
-  font-family: "IBM Plex Serif-Regular", Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  left: 127px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 17px;
-}
-
-.loginpage .google-2 {
+.login .view-3 {
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0px 4px 4px #00000040;
-  height: 59px;
-  left: 87px;
+  height: 50px;
+  left: 195px;
   overflow: hidden;
   position: absolute;
-  top: 651px;
-  width: 300px;
+  top: 462px;
+  width: 140px;
 }
 
-.loginpage .text-wrapper-2 {
+.login .text-wrapper-6 {
   color: #000000;
   font-family: "IBM Plex Serif-Regular", Helvetica;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  left: 137px;
+  left: 55px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 17px;
-}
-
-.loginpage .rectangle {
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #8abfff;
-  border-radius: 20px;
-  box-shadow: inset 0px 4px 4px #00000040;
-  height: 50px;
-  left: 75px;
-  position: absolute;
-  top: 292px;
-  width: 350px;
-}
-
-.loginpage .rectangle-2 {
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #8abfff;
-  border-radius: 20px;
-  box-shadow: inset 0px 4px 4px #00000040;
-  height: 50px;
-  left: 75px;
-  position: absolute;
-  top: 406px;
-  width: 350px;
-}
-
-.loginpage .user-alt {
-  height: 25px;
-  left: 85px;
-  position: absolute;
-  top: 257px;
-  width: 25px;
-}
-
-.loginpage .text-wrapper-3 {
-  color: #000000;
-  font-family: "Inter-ExtraLight", Helvetica;
-  font-size: 17px;
-  font-weight: 200;
-  left: 120px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 256px;
-}
-
-.loginpage .keyboard {
-  height: 25px;
-  left: 86px;
-  position: absolute;
-  top: 373px;
-  width: 25px;
-}
-
-.loginpage .text-wrapper-4 {
-  color: #000000;
-  font-family: "Inter-ExtraLight", Helvetica;
-  font-size: 17px;
-  font-weight: 200;
-  left: 122px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 373px;
+  top: 14px;
 }
