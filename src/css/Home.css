@@ -8,6 +8,17 @@
 }
 
 /* 홈 페이지 기본 스타일 */
+
+.slider-container {
+  height: 530px;
+}
+
+.slider-container .slider-image {
+  width: auto;
+
+  height: 500px;
+}
+
 .home {
   font-family: "GmarketSansMedium", sans-serif; /* 기본 폰트 패밀리 변경 */
   color: #333;
@@ -24,12 +35,17 @@
 
 .home .introduce {
   margin-top: 100px;
+  position: relative;
+  left: 40px;
 }
-.home .profile-photo {
-  position: absolute;
+.profile-photo {
+  position: relative;
+  border-radius: 50%;
   width: 150px;
-  top: 200px;
-  left: 850px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 20px;
+  left: 170px;
 }
 
 /* 홈 페이지 헤더 스타일 */
@@ -112,6 +128,10 @@
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.home-projects .educareer {
+  position: relative;
+  left: 150px;
 }
 
 /* 섹션 타이틀 스타일 */
@@ -274,6 +294,7 @@
 
 .modal-overlay {
   position: fixed;
+  height: auto;
   top: 0;
   left: 0;
   right: 0;
@@ -318,7 +339,7 @@
 }
 
 .slider-image {
-  width: 70%; /* 이미지 크기를 30% 줄임 (원래 100%에서 30% 감소) */
+  width: 60%; /* 이미지 크기를 30% 줄임 (원래 100%에서 30% 감소) */
   height: auto; /* 이미지의 높이는 자동 조정 */
   margin: 0 auto; /* 중앙 정렬 */
   display: block; /* 블록 요소로 설정 */

@@ -1,13 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom/client"; // 'react-dom/client'에서 'createRoot'를 가져옵니다.
-import "./index.css";
+import ReactDOM from "react-dom/client";
 import App from "./App";
-import "@fortawesome/fontawesome-free/css/all.min.css"; // Font Awesome CSS 포함
+// import { auth, firestore } from "./firebase/firebase"; // 불필요한 import 제거
 
-const rootElement = document.getElementById("root");
-
-const root = ReactDOM.createRoot(rootElement);
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

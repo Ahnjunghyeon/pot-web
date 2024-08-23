@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "portfolio": "portfolio-web-jung",
+    "default": "portfolio-web-jung"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

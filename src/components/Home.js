@@ -2,51 +2,49 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import "../css/Home.css";
 
-Modal.setAppElement("#root");
-
 function Home() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ type: "", text: "" });
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    "/경진대회/봄춘내천1.jpg",
-    "/경진대회/봄춘내천2.jpg",
-    "/경진대회/봄춘내천3.jpg",
-    "/경진대회/봄춘내천4.jpg",
-    "/경진대회/봄춘내천5.jpg",
-    "/경진대회/봄춘내천6.jpg",
-    "/경진대회/봄춘내천7.jpg",
-    "/경진대회/빅데이터 경진대회 발표모습1.jpg",
-    "/경진대회/빅데이터 경진대회 상탄사진.jpg",
+    "/images/봄춘내천1.jpg",
+    "/images/봄춘내천2.jpg",
+    "/images/봄춘내천3.jpg",
+    "/images/봄춘내천4.jpg",
+    "/images/봄춘내천5.jpg",
+    "/images/봄춘내천6.jpg",
+    "/images/봄춘내천7.jpg",
+    "/images/빅데이터 경진대회 발표모습1.jpg",
+    "/images/빅데이터 경진대회 상탄사진.jpg",
   ];
 
   const reactImages = [
-    "/프로젝트/로고페이지1.jpg",
-    "/프로젝트/로고페이지2.jpg",
-    "/프로젝트/로고페이지3.jpg",
-    "/프로젝트/1홈.jpg",
-    "/프로젝트/2게시물.jpg",
-    "/프로젝트/3사이드메뉴.jpg",
-    "/프로젝트/4업로드페이지.jpg",
-    "/프로젝트/5다이렉트메세지.jpg",
-    "/프로젝트/5알림.jpg",
-    "/프로젝트/6프로필.jpg",
-    "/프로젝트/7반응형팔로워리스트.jpg",
-    "/프로젝트/8반응형홈.jpg",
-    "/프로젝트/9반응형메세지.jpg",
-    "/프로젝트/10반응형프로필.jpg",
-    "/프로젝트/11반응형업로드.jpg",
+    "/images/로고페이지1.jpg",
+    "/images/로고페이지2.jpg",
+    "/images/로고페이지3.jpg",
+    "/images/1홈.jpg",
+    "/images/2게시물.jpg",
+    "/images/3사이드메뉴.jpg",
+    "/images/4업로드페이지.jpg",
+    "/images/5다이렉트메세지.jpg",
+    "/images/5알림.jpg",
+    "/images/6프로필.jpg",
+    "/images/7반응형팔로워리스트.jpg",
+    "/images/8반응형홈.jpg",
+    "/images/9반응형메세지.jpg",
+    "/images/10반응형프로필.jpg",
+    "/images/11반응형업로드.jpg",
   ];
 
   const newProjectImages = [
-    "캡스톤/캡스톤3.jpg",
-    "캡스톤/캡스톤4.jpg",
-    "캡스톤/캡스톤5.jpg",
-    "캡스톤/캡스톤6.jpg",
-    "캡스톤/캡스톤7.jpg",
-    "캡스톤/캡스톤8.jpg",
-    "캡스톤/캡스톤9.jpg",
+    "/images/캡스톤3.jpg",
+    "/images/캡스톤4.jpg",
+    "/images/캡스톤5.jpg",
+    "/images/캡스톤6.jpg",
+    "/images/캡스톤7.jpg",
+    "/images/캡스톤8.jpg",
+    "/images/캡스톤9.jpg",
   ];
 
   const openModal = (type, text) => {
@@ -124,7 +122,7 @@ function Home() {
           <br></br>
         </div>
         <div className="introduce home-section">
-          <p>저를 한문장으로 소개하자면</p>
+          <h3>저를 한문장으로 소개하자면</h3>
           <h1>"원인이 없다면 결과도 없다" 입니다</h1>
         </div>
         <div className="photo-container">
@@ -139,15 +137,19 @@ function Home() {
         <div className="home-sidebar">
           <h1>목차</h1>
           <ul>
+            <br></br>
             <li>
               <a href="#intro">소개</a>
             </li>
+            <br></br>
             <li>
               <a href="#skills">기술</a>
             </li>
+            <br></br>
             <li>
               <a href="#projects">프로젝트</a>
             </li>
+            <br></br>
             <li>
               <a href="#Education">학력</a>
             </li>
@@ -209,7 +211,7 @@ function Home() {
               <div className="project-item">
                 <div className="image-container">
                   <img
-                    src="/경진대회/빅데이터 경진대회 발표모습1.jpg"
+                    src="/images/빅데이터 경진대회 발표모습1.jpg"
                     alt="빅데이터 경진대회 발표"
                     className="project-image"
                   />
@@ -227,7 +229,7 @@ function Home() {
               <div className="project-item">
                 <div className="image-container">
                   <img
-                    src="/프로젝트/로고페이지1.jpg"
+                    src="/images/로고페이지1.jpg"
                     alt="React SNS 로고"
                     className="project-image"
                   />
@@ -251,7 +253,7 @@ function Home() {
               <div className="project-item">
                 <div className="image-container">
                   <img
-                    src="/캡스톤/캡스톤3.jpg"
+                    src="/images/캡스톤3.jpg"
                     alt="캡스톤 메인 이미지"
                     className="project-image"
                   />
@@ -297,6 +299,9 @@ function Home() {
                   src={images[currentImageIndex]}
                   alt={`슬라이드 ${currentImageIndex + 1}`}
                   className="slider-image"
+                  onError={(e) => {
+                    e.target.src = "/path/to/placeholder/image.jpg"; // 이미지 로드 실패 시 대체 이미지 경로
+                  }}
                 />
                 <button className="slider-button next" onClick={nextImage}>
                   ›
@@ -548,21 +553,19 @@ function Home() {
         </div>
       </Modal>
       <section id="Education" className="home-projects home-section">
-        <h2>학력</h2>
+        <h2 className="educareer">학력</h2>
         <div className="career-details">
-          <h3>한림대학교 - 소프트웨어융합 콘텐츠IT</h3>
-          <h3>기간: 2020 ~ 2024</h3>
+          <h3>한림대학교 - 컴퓨터공학전공 / 학사 졸업</h3>
+          <h3>2020 ~ 2024</h3>
 
           <ul>
             <li>알고리즘, 자료구조: CS 학습</li>
             <li>인공지능, Python, C 언어 기초, Java</li>
           </ul>
-          <p>
-            <strong>전문학사 졸업</strong>
-          </p>
+          <p></p>
           <h3>2023년</h3>
           <p>
-            <strong>빅데이터 경진대회 금상 (2위)</strong>
+            <strong>빅데이터 경진대회 금상 - 2위 </strong>
           </p>
         </div>
       </section>
