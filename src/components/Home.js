@@ -1,93 +1,67 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
+import ImageSlider from "./ImageSlider"; // 올바른 경로로 조정
 import "../css/Home.css";
 
+// Home 컴포넌트
 function Home() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [modalContent, setModalContent] = useState({ type: "", text: "" });
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [modalContent, setModalContent] = useState({ type: "", text: "" }); // modalContent 상태 추가
+  const [selectedImages, setSelectedImages] = useState(null);
 
-  const images = [
-    "/images/봄춘내천1.jpg",
-    "/images/봄춘내천2.jpg",
-    "/images/봄춘내천3.jpg",
-    "/images/봄춘내천4.jpg",
-    "/images/봄춘내천5.jpg",
-    "/images/봄춘내천6.jpg",
-    "/images/봄춘내천7.jpg",
-    "/images/빅데이터 경진대회 발표모습1.jpg",
-    "/images/빅데이터 경진대회 상탄사진.jpg",
+  const openImageSlider = (images) => {
+    setSelectedImages(images);
+  };
+
+  const images1 = [
+    "/images/봄춘내천1.JPG",
+    "/images/봄춘내천2.JPG",
+    "/images/봄춘내천3.JPG",
+    "/images/봄춘내천4.JPG",
+    "/images/봄춘내천5.JPG",
+    "/images/봄춘내천6.JPG",
+    "/images/봄춘내천7.JPG",
+    "/images/빅데이터 경진대회 발표모습1.JPG",
+    "/images/빅데이터 경진대회 상탄사진.JPG",
   ];
 
-  const reactImages = [
-    "/images/로고페이지1.jpg",
-    "/images/로고페이지2.jpg",
-    "/images/로고페이지3.jpg",
-    "/images/1홈.jpg",
-    "/images/2게시물.jpg",
-    "/images/3사이드메뉴.jpg",
-    "/images/4업로드페이지.jpg",
-    "/images/5다이렉트메세지.jpg",
-    "/images/5알림.jpg",
-    "/images/6프로필.jpg",
-    "/images/7반응형팔로워리스트.jpg",
-    "/images/8반응형홈.jpg",
-    "/images/9반응형메세지.jpg",
-    "/images/10반응형프로필.jpg",
-    "/images/11반응형업로드.jpg",
+  const images2 = [
+    "/images/로고페이지1.JPG",
+    "/images/로고페이지2.JPG",
+    "/images/로고페이지3.JPG",
+    "/images/1홈.JPG",
+    "/images/2게시물.JPG",
+    "/images/3사이드메뉴.JPG",
+    "/images/4업로드페이지.JPG",
+    "/images/5다이렉트메세지.JPG",
+    "/images/5알림.JPG",
+    "/images/6프로필.JPG",
+    "/images/7반응형팔로워리스트.JPG",
+    "/images/8반응형홈.JPG",
+    "/images/9반응형메세지.JPG",
+    "/images/10반응형프로필.JPG",
+    "/images/11반응형업로드.JPG",
   ];
 
-  const newProjectImages = [
-    "/images/캡스톤3.jpg",
-    "/images/캡스톤4.jpg",
-    "/images/캡스톤5.jpg",
-    "/images/캡스톤6.jpg",
-    "/images/캡스톤7.jpg",
-    "/images/캡스톤8.jpg",
-    "/images/캡스톤9.jpg",
+  const images3 = [
+    "/images/캡스톤3.JPG",
+    "/images/캡스톤4.JPG",
+    "/images/캡스톤5.JPG",
+    "/images/캡스톤6.JPG",
+    "/images/캡스톤7.JPG",
+    "/images/캡스톤8.JPG",
+    "/images/캡스톤9.JPG",
   ];
 
+  // 모달 열기
   const openModal = (type, text) => {
     setModalContent({ type, text });
-    setCurrentImageIndex(0); // 슬라이더를 처음부터 시작하도록 설정
     setModalIsOpen(true);
   };
 
+  // 모달 닫기
   const closeModal = () => {
     setModalIsOpen(false);
-  };
-
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-  };
-
-  const nextReactImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % reactImages.length);
-  };
-
-  const prevReactImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + reactImages.length) % reactImages.length
-    );
-  };
-
-  const nextNewProjectImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex + 1) % newProjectImages.length
-    );
-  };
-
-  const prevNewProjectImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + newProjectImages.length) % newProjectImages.length
-    );
   };
 
   useEffect(() => {
@@ -122,8 +96,10 @@ function Home() {
           <br></br>
         </div>
         <div className="introduce home-section">
-          <h3>저를 한문장으로 소개하자면</h3>
-          <h1>"원인이 없다면 결과도 없다" 입니다</h1>
+          <div className="introduce-text">
+            "저는 '원인이 없다면 결과도 없다'는 신념을 바탕으로, <br></br>문제의
+            근본을 분석하고 해결하는 데 집중하는 사람입니다."
+          </div>
         </div>
         <div className="photo-container">
           <img
@@ -211,11 +187,15 @@ function Home() {
               <div className="project-item">
                 <div className="image-container">
                   <img
-                    src="/images/빅데이터 경진대회 발표모습1.jpg"
+                    src="/images/빅데이터 경진대회 발표모습1.JPG"
                     alt="빅데이터 경진대회 발표"
                     className="project-image"
                   />
-                  <div className="image-overlay">
+                  <div
+                    className="image-overlay"
+                    onClick={() => openModal("competition", "")}
+                    style={{ cursor: "pointer" }} // 클릭 가능하도록 스타일 추가
+                  >
                     <p>📌 4인 프로젝트 📌 2023.08~2023.10.27 </p>
                   </div>
                 </div>
@@ -229,11 +209,20 @@ function Home() {
               <div className="project-item">
                 <div className="image-container">
                   <img
-                    src="/images/로고페이지1.jpg"
+                    src="/images/로고페이지1.JPG"
                     alt="React SNS 로고"
                     className="project-image"
                   />
-                  <div className="image-overlay">
+                  <div
+                    className="image-overlay"
+                    onClick={() =>
+                      openModal(
+                        "react",
+                        "개인적으로도 SNS 기능은 많이 사용하는데, 그 기능을 제가 만들어보고 싶다는 생각을 정말 많이 해왔습니다. React에 대해서 공부도 하고, 데이터베이스까지 이용해서 나만의 웹을 만들어보자 싶어서 시작했습니다.\n\n📌 주요 기능 및 특징\n- 서로 유저간 팔로우기능\n- 게시물의 업로드, 수정 및 삭제\n\n- 댓글추가, 수정 및 삭제\n- 상대방의 프로필 검색\n- 유저간 다이렉트메세지\n- 이벤트 발생 시, 알림메세지\n\n📌 사용 기술 및 언어\n- Firebase ( Authentication, firestore, storage 등 전반적인 데이터베이스에 정보 저장 역할 )\n- CSS ( 웹 페이지의 스타일을 지정하기 위해 사용 )\n- React ( React는 재사용 가능한 컴포넌트와 가상 DOM을 활용하여 효율적이고 유연한 사용자 인터페이스를 구축할 수 있게 해줍니다. )\n\n📌 작업내용 요약\n- 기초적인 토대는 AI를 이용하여 간단하게 제작 후, 살을 덧붙혀가는 식의 작업을 진행했습니다.\n- 전반적인 데이터베이스의 정보 저장 루트들은 AI를 통해서 잘못 되는 경우가 많았기에 직접 경로, 저장되는 내용들을 설정했습니다.\n\n📌 프로젝트 진행중 어려웠던 점\n- 문제 : 첫째로는 home 페이지에서 댓글 기능을 제작하던 중 아무런 에러도 없지만 기능도 작동하지 않는 상태가 되었습니다. 개발자모드의 콘솔로그랑, 에러가 발생하지 않아서 어디가 문제인지 찾기 어려워서 한참을 헤맸습니다\n- 해결 : 댓글에서 문제가 있다고 에러가 발생한건 아니지만 기능이 안되는 것에는 이유가 있다 생각하고 그 원인을 거슬러 올라가다가 연결된 다른 페이지에서 오타, 연결오류가 나있던 것을 알 수 있었습니다. 왜 에러가 발생하지 않았는지 이해는 못했지만 결과는 원인이 있어야 한다는 저의 생각대로 원인을 찾아 해결한 사례였습니다."
+                      )
+                    }
+                    style={{ cursor: "pointer" }} // 클릭 가능하도록 스타일 추가
+                  >
                     <p>📌 개인 프로젝트 📌 2024.05~2024.08 </p>
                   </div>
                 </div>
@@ -253,11 +242,20 @@ function Home() {
               <div className="project-item">
                 <div className="image-container">
                   <img
-                    src="/images/캡스톤3.jpg"
+                    src="/images/캡스톤3.JPG"
                     alt="캡스톤 메인 이미지"
                     className="project-image"
                   />
-                  <div className="image-overlay">
+                  <div
+                    onClick={() =>
+                      openModal(
+                        "new-project",
+                        "이 프로젝트는 새로운 아이디어와 기술을 사용하여 개발한 웹 애플리케이션입니다. 여러 기능들을 통합하여 사용자의 편의를 고려한 프로젝트입니다.\n\n📌 주요 기능 및 특징\n- 사용자 인증\n- 데이터 분석\n- 대시보드\n\n📌 사용 기술 및 언어\n- 새로운 프레임워크 (예: Vue.js)\n- API 통신\n- 데이터 시각화 라이브러리\n\n📌 작업내용 요약\n- 초기 디자인 및 기획\n- 기능 구현 및 테스트\n- 배포 및 유지보수\n\n📌 프로젝트 진행중 어려웠던 점\n- 문제 : 초기 기획 단계에서 요구사항을 명확히 이해하기 어려웠습니다.\n- 해결 : 요구사항을 명확히 하기 위해 여러 번의 회의를 통해 수정하고 조정하여 문제를 해결했습니다."
+                      )
+                    }
+                    style={{ cursor: "pointer" }} // 클릭 가능하도록 스타일 추가
+                    className="image-overlay"
+                  >
                     <p>📌 2인 프로젝트 📌 2023.08~2023.11 </p>
                   </div>
                 </div>
@@ -292,23 +290,7 @@ function Home() {
           {modalContent.type === "competition" && (
             <>
               <div className="slider-container">
-                <button className="slider-button prev" onClick={prevImage}>
-                  ‹
-                </button>
-                <img
-                  src={images[currentImageIndex]}
-                  alt={`슬라이드 ${currentImageIndex + 1}`}
-                  className="slider-image"
-                  onError={(e) => {
-                    e.target.src = "/path/to/placeholder/image.jpg"; // 이미지 로드 실패 시 대체 이미지 경로
-                  }}
-                />
-                <button className="slider-button next" onClick={nextImage}>
-                  ›
-                </button>
-                <div className="slider-indicator">
-                  {currentImageIndex + 1} / {images.length}
-                </div>
+                <ImageSlider images={images1} />
               </div>
               <div className="modal-text">
                 <p>
@@ -389,22 +371,8 @@ function Home() {
           )}
           {modalContent.type === "react" && (
             <div className="react-modal-content">
-              <div className="slider-container">
-                <button className="slider-button prev" onClick={prevReactImage}>
-                  ‹
-                </button>
-                <img
-                  src={reactImages[currentImageIndex]}
-                  alt={`슬라이드 ${currentImageIndex + 1}`}
-                  className="slider-image"
-                />
-                <button className="slider-button next" onClick={nextReactImage}>
-                  ›
-                </button>
-                <div className="slider-indicator">
-                  {currentImageIndex + 1} / {reactImages.length}
-                </div>
-              </div>
+              <ImageSlider images={images2} />
+
               <div className="modal-text">
                 <p>
                   개인적으로도 SNS 기능은 많이 사용하는데, 그 기능을 제가
@@ -482,32 +450,13 @@ function Home() {
           {modalContent.type === "new-project" && (
             <div className="modal-overlay">
               <div className="modal">
-                {/* Close button */}
-                <button
-                  className="modal-close"
-                  onClick={() => setModalIsOpen(false)} // Close modal
-                >
+                {/* X 버튼 */}
+                <button onClick={closeModal} className="modal-close">
                   ×
                 </button>
-                <button
-                  className="slider-button prev"
-                  onClick={prevNewProjectImage}
-                >
-                  ‹
-                </button>
-                <div className="new-project-modal-content">
-                  <img
-                    src={newProjectImages[currentImageIndex]}
-                    alt={`슬라이드 ${currentImageIndex + 1}`}
-                    className="slider-image"
-                  />
-                </div>
-                <button
-                  className="slider-button next"
-                  onClick={nextNewProjectImage}
-                >
-                  ›
-                </button>
+
+                <ImageSlider images={images3} />
+
                 <div className="modal-text">
                   <p>
                     📌 23년에는 코로나가 종식된지 얼마 안되던 해에 배달의민족,

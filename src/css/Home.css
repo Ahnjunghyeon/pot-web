@@ -7,16 +7,28 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "GowunBatang-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* 홈 페이지 기본 스타일 */
 
 .slider-container {
-  height: 530px;
+  width: auto;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-container .slider-image {
   width: auto;
-
-  height: 500px;
+  justify-content: center;
+  height: 450px;
 }
 
 .home {
@@ -25,7 +37,7 @@
   padding: 20px;
   background-color: #f4f4f4;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 .home .selfie {
   display: flex;
@@ -36,8 +48,18 @@
 .home .introduce {
   margin-top: 100px;
   position: relative;
-  left: 40px;
+  left: 50px;
+  font-size: 1em;
+  top: -40px;
 }
+
+.home .introduce-text {
+  font-size: 1.3em;
+  font-weight: 1000;
+  color: #00000098;
+  font-family: "GowunBatang-Regular";
+}
+
 .profile-photo {
   position: relative;
   border-radius: 50%;
@@ -339,10 +361,14 @@
 }
 
 .slider-image {
-  width: 60%; /* 이미지 크기를 30% 줄임 (원래 100%에서 30% 감소) */
-  height: auto; /* 이미지의 높이는 자동 조정 */
+  width: 70%; /* 이미지 크기를 30% 줄임 (원래 100%에서 30% 감소) */
+  height: 70%; /* 이미지의 높이는 자동 조정 */
   margin: 0 auto; /* 중앙 정렬 */
   display: block; /* 블록 요소로 설정 */
+}
+
+/* 2번슬라이더 이미지 */
+.slider-image2 {
 }
 
 .new-project-modal-content {

@@ -1,0 +1,29 @@
+{
+  /* <div className="home">
+<div className="card" onClick={() => openModal(images1)}>
+  <h2>슬라이드쇼 1</h2>
+  <img src={images1[0]} alt="슬라이드쇼 1" className="card-image" />
+</div>
+<div className="card" onClick={() => openModal(images2)}>
+  <h2>슬라이드쇼 2</h2>
+  <img src={images2[0]} alt="슬라이드쇼 2" className="card-image" />
+</div>
+<div className="card" onClick={() => openModal(images3)}>
+  <h2>슬라이드쇼 3</h2>
+  <img src={images3[0]} alt="슬라이드쇼 3" className="card-image" />
+</div>
+
+<Modal
+  isOpen={modalIsOpen}
+  onRequestClose={closeModal}
+  contentLabel="Image Slider"
+  className="Modal"
+  overlayClassName="Overlay"
+>
+  <button onClick={closeModal} className="modal-close-button">
+    &times;
+  </button>
+  <ImageSlider images={modalImages} />
+</Modal>
+</div> */
+}

@@ -1,17 +1,11 @@
 import React, { useState } from "react";
-import "../css/Header.css";
+import "../css/Header.css"; // 스타일 시트 불러오기
 
 function Header() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState({
-    site: false,
-    menu2: false,
-  });
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const toggleDropdown = (menu) => {
-    setIsDropdownOpen((prevState) => ({
-      ...prevState,
-      [menu]: !prevState[menu],
-    }));
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
@@ -22,15 +16,16 @@ function Header() {
           href="https://login-test-a417d.web.app/"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: "#fff", textDecoration: "none" }}
         >
           SNS WEB
         </a>
-        <a className="menu-item" onClick={() => toggleDropdown("menu2")}>
-          Git Hub
-          <div
-            className={`dropdown-menu ${isDropdownOpen.menu2 ? "show" : ""}`}
-          >
+
+        {/* Git Hub 드롭다운 버튼 */}
+        <div className="dropdown">
+          <div className="menu-item dropdown-toggle" onClick={toggleDropdown}>
+            GIT HUB
+          </div>
+          <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
             <a
               href="https://github.com/Ahnjunghyeon/test-login"
               target="_blank"
@@ -64,10 +59,47 @@ function Header() {
               안중현의 깃허브
             </a>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   );
 }
 
 export default Header;
+
+{
+  /* <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
+            <a
+              href="https://github.com/Ahnjunghyeon/test-login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dropdown-item"
+            >
+              SNS Git
+            </a>
+            <a
+              href="https://github.com/Ahnjunghyeon/2023capston"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dropdown-item"
+            >
+              Capston Git
+            </a>
+            <a
+              href="https://github.com/Ahnjunghyeon/pot-web"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dropdown-item"
+            >
+              Portfolio Git
+            </a>
+            <a
+              href="https://github.com/Ahnjunghyeon?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dropdown-item"
+            >
+              안중현의 깃허브
+            </a>
+          </div> */
+}

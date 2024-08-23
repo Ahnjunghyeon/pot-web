@@ -1,0 +1,46 @@
+/* ImageSlider.css */
+.image-slider {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 이미지가 영역을 넘지 않도록 처리 */
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-content {
+  width: 70%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover; /* 이미지를 슬라이드 영역에 맞게 조정 */
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
