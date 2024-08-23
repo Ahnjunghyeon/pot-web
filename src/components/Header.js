@@ -1,54 +1,71 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "../css/Header.css";
-import Signup from "../pages/Signup";
-import Login from "../pages/Login";
 
 function Header() {
-  const [showSignup, setShowSignup] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState({
+    site: false,
+    menu2: false,
+  });
 
-  const toggleSignup = () => setShowSignup(!showSignup);
-  const toggleLogin = () => setShowLogin(!showLogin);
+  const toggleDropdown = (menu) => {
+    setIsDropdownOpen((prevState) => ({
+      ...prevState,
+      [menu]: !prevState[menu],
+    }));
+  };
 
   return (
     <div className="header">
-      <div className="div">
-        <p className="PORTFOLIO-web">
-          <span className="text-wrapper">PORTFOLIO</span>
-          <span className="span"> web</span>
-        </p>
-        <div className="text-wrapper-2" onClick={toggleSignup}>
-          회원가입
-        </div>
-        <div className="text-wrapper-3" onClick={toggleLogin}>
-          로그인
-        </div>
-        <div className="element">Menu1</div>
-        <div className="element-2">Menu2</div>
-        <div className="element-3">Menu3</div>
-        <div className="element-4">Menu4</div>
+      <div className="menu">
+        <a
+          className="menu-item"
+          href="https://login-test-a417d.web.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#fff", textDecoration: "none" }}
+        >
+          SNS WEB
+        </a>
+        <a className="menu-item" onClick={() => toggleDropdown("menu2")}>
+          Git Hub
+          <div
+            className={`dropdown-menu ${isDropdownOpen.menu2 ? "show" : ""}`}
+          >
+            <a
+              href="https://github.com/Ahnjunghyeon/test-login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dropdown-item"
+            >
+              SNS Git
+            </a>
+            <a
+              href="https://github.com/Ahnjunghyeon/2023capston"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dropdown-item"
+            >
+              Capston Git
+            </a>
+            <a
+              href="https://github.com/Ahnjunghyeon/pot-web"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dropdown-item"
+            >
+              Portfolio Git
+            </a>
+            <a
+              href="https://github.com/Ahnjunghyeon?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="dropdown-item"
+            >
+              안중현의 깃허브
+            </a>
+          </div>
+        </a>
       </div>
-      {showSignup && (
-        <div className="modal-overlay" onClick={toggleSignup}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={toggleSignup}>
-              &times;
-            </button>
-            <Signup />
-          </div>
-        </div>
-      )}
-      {showLogin && (
-        <div className="modal-overlay" onClick={toggleLogin}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={toggleLogin}>
-              &times;
-            </button>
-            <Login />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

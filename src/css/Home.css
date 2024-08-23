@@ -1,0 +1,403 @@
+/* 폰트 정의 */
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 홈 페이지 기본 스타일 */
+.home {
+  font-family: "GmarketSansMedium", sans-serif; /* 기본 폰트 패밀리 변경 */
+  color: #333;
+  padding: 20px;
+  background-color: #f4f4f4;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.home .selfie {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.home .introduce {
+  margin-top: 100px;
+}
+.home .profile-photo {
+  position: absolute;
+  width: 150px;
+  top: 200px;
+  left: 850px;
+}
+
+/* 홈 페이지 헤더 스타일 */
+.home-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.home-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* 소개 섹션 스타일 */
+.home-intro {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #34495e;
+}
+
+.home-intro .text {
+  font-size: 0.8em;
+}
+
+/* 홈 페이지 콘텐츠 레이아웃 */
+.home-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* 사이드바 스타일 */
+.home-sidebar {
+  margin-top: 20px;
+  text-align: center;
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-sidebar h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #2980b9;
+}
+
+.home-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.home-sidebar ul li a {
+  text-decoration: none;
+  color: #2980b9;
+  font-size: 1.2em;
+}
+
+.home-sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 메인 콘텐츠 스타일 */
+.home-main {
+  flex: 3;
+}
+
+/* 섹션 기본 스타일 */
+.home-intro,
+.home-skill,
+.home-projects {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 섹션 타이틀 스타일 */
+.home-intro h2,
+.home-skill h2,
+.home-projects h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #2980b9;
+}
+
+/* 섹션 본문 스타일 */
+.home-intro p,
+.home-skill p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* 기술 목록 스타일 */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  font-size: 1em;
+  color: #2c3e50;
+  width: 120px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.skill-item span {
+  display: block;
+  margin-top: 5px;
+}
+
+/* 코퍼레이션 목록 스타일 */
+.corporation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.corporation-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  font-size: 1em;
+  color: #2c3e50;
+  width: 120px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.corporation-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.corporation-item span {
+  display: block;
+  margin-top: 5px;
+}
+
+/* 프로젝트 섹션 스타일 */
+.home-projects {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* 프로젝트 아이템 스타일 */
+.project-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.project-description {
+  padding: 15px;
+  font-size: 1.2em;
+  text-align: center;
+  cursor: pointer;
+  color: #2980b9;
+  transition: color 0.3s;
+}
+
+.project-description:hover {
+  color: #1f2d3d;
+}
+
+/* 모달 스타일 */
+.modal {
+  position: relative;
+  max-width: 90vw; /* 화면 너비의 90%로 설정 */
+  max-height: 90vh; /* 화면 높이의 90%로 설정 */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden; /* 모달의 내용이 넘치지 않도록 설정 */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333; /* 닫기 버튼 색상 */
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  z-index: 100;
+}
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}
+
+.slider-image {
+  width: 70%; /* 이미지 크기를 30% 줄임 (원래 100%에서 30% 감소) */
+  height: auto; /* 이미지의 높이는 자동 조정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  display: block; /* 블록 요소로 설정 */
+}
+
+.new-project-modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* 이미지의 높이를 자동 조정 */
+  max-height: 60%; /* 모달 높이의 60%로 설정 */
+  overflow: hidden;
+}
+
+.modal-text {
+  font-family: "GmarketSansMedium", sans-serif; /* 기본 폰트 패밀리 변경 */
+
+  max-height: 30vh; /* 화면 높이의 70%로 설정하여 텍스트 영역을 조정 */
+  overflow-y: auto; /* 내용이 넘칠 경우 스크롤 추가 */
+  padding: 20px; /* 여백을 넓혀 가독성 향상 */
+  background-color: #f9f9f9; /* 배경색을 설정하여 텍스트 가독성 향상 */
+  border-radius: 8px; /* 모서리 둥글게 처리 */
+}
+
+.modal-text p,
+.modal-text ul {
+  margin: 15px 0; /* 항목 간의 여백 설정 */
+}
+
+.modal-text ul {
+  list-style-type: disc;
+  padding-left: 25px; /* 리스트 항목과 텍스트 사이 여백 추가 */
+}
+
+/* 학력 섹션 스타일 */
+.home-projects {
+  padding: 20px;
+}
+
+.career-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.career-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.career-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.career-details ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.career-details li {
+  font-size: 1rem;
+  color: #555;
+}
+
+.career-details h3 + p {
+  margin-top: 0;
+}
+
+.career-details h3 {
+  margin-top: 20px;
+}
+
+.career-details p strong {
+  color: #000;
+}
